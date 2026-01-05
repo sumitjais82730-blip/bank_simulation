@@ -1,7 +1,7 @@
 import gmail
 
 def send_credentials(email,name,acn,pwd):
-    con=gmail.GMail('sumitjais82730@gmail.com','kdwe uqnl khis eiqg')
+    con=gmail.GMail('#your gamil','#app passowrd')
     body=f'''Welcome {name},
     Welcome to SumJaiz Bank.
     Here is your account details
@@ -20,7 +20,7 @@ def send_credentials(email,name,acn,pwd):
 
 
 def send_otp(email,name,otp):
-    con=gmail.GMail('sumitjais82730@gmail.com','kdwe uqnl khis eiqg')
+    con=gmail.GMail('#your gamil','#app passowrd')
     body=f'''Hello {name},
     Here is your otp for your password
     OTP = {otp}
@@ -37,7 +37,7 @@ def send_otp(email,name,otp):
 
 
 def send_withdraw_otp(email,name,otp,amt):
-    con=gmail.GMail('sumitjais82730@gmail.com','kdwe uqnl khis eiqg')
+    con=gmail.GMail('#your gamil','#app passowrd')
     body=f'''Hello {name},
     Here is your otp for withdraw {amt}
     OTP = {otp}
@@ -54,7 +54,7 @@ def send_withdraw_otp(email,name,otp,amt):
 
 
 def send_transfer_otp(email,name,otp,amt,to_acn):
-    con=gmail.GMail('sumitjais82730@gmail.com','kdwe uqnl khis eiqg')
+    con=gmail.GMail('#your gamil','#app passowrd')
     body=f'''Hello {name},
     Here is your otp for transfer {amt} to ACN : {to_acn}
     OTP = {otp}
@@ -67,4 +67,5 @@ def send_transfer_otp(email,name,otp,amt,to_acn):
 
 '''
     msg=gmail.Message(to=email,subject='Your OTP for trf.',text=body)
+
     con.send(msg)
